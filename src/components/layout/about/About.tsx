@@ -1,3 +1,4 @@
+import Projects from "../Projects/Projects"
 import styles from "./about.module.sass"
 
 export default function About() {
@@ -9,7 +10,9 @@ export default function About() {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non esse eos fugiat quasi aliquid deserunt,perspiciatis ea, earum temporibus sed ipsa. Nesciunt tenetur reprehenderit, dignissimos deleniti itaque optio pariatur?
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non esse eos fugiat quasi aliquid deserunt,perspiciatis ea, earum temporibus sed ipsa. Nesciunt tenetur reprehenderit, dignissimos deleniti itaque optio pariatur?
                 </span>
+
             </div>
+            <Projects />
         </div>
     )
 }

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel"
 
 
-import styles from "./projects.module.sass"
+
 import Autoplay from "embla-carousel-autoplay"
 
 export default function Projects() {
@@ -29,20 +29,18 @@ export default function Projects() {
     }, [api])
 
     return (
-        <div className={styles.WrapperProjects}>
-            <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]}>
-                <CarouselContent>
-                    {Array.from({ length: 10 }).map((_, index) => (
-                        <CarouselItem key={index}>
-                            <Card className="w-full h-60">
-                                <CardContent className="flex items-center justify-center h-full">
-                                    <span className="text-4xl font-semibold">{index + 1}</span>
-                                </CardContent>
-                            </Card>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-            </Carousel>
-        </div>
+        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]}>
+            <CarouselContent>
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <CarouselItem key={index}>
+                        <Card className="h-60">
+                            <CardContent className="flex items-center justify-center h-full">
+                                <span className="text-4xl font-semibold">{index + 1}</span>
+                            </CardContent>
+                        </Card>
+                    </CarouselItem>
+                ))}
+            </CarouselContent>
+        </Carousel>
     )
 }
