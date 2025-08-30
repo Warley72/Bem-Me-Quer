@@ -29,11 +29,11 @@ export default function Projects() {
     }, [api])
 
     return (
-        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]}>
+        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]} className="bg-[#433A23] p-2 rounded-xl">
             <CarouselContent>
-                {Array.from({ length: 8 }).map((_, index) => (
+                {Array.from({ length: 1 }).map((_, index) => (
                     <CarouselItem key={index}>
-                        <Card className="h-60">
+                        <Card className="h-75 w-120">
                             <CardContent className="flex items-center justify-center h-full">
                                 <span className="text-4xl font-semibold">{index + 1}</span>
                             </CardContent>

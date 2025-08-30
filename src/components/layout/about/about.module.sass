@@ -1,25 +1,46 @@
 .wrapperAbout
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
+    gap: 5rem
 
-    background-color: #808080
     width: 100%
     padding: 2rem
+
+    @media (max-width: 1024px)
+        padding: 1rem
 
 .ContainerText
     display: flex
     flex-direction: column
 
-    max-width: 500px
+    max-width: 850px
     width: 100%
+    padding: 2rem
+    background: linear-gradient(
+    to right,
+    rgba(67, 58, 35, 0.25) 0%,
+    rgba(67, 58, 35, 0.25) 85%,
+    rgba(67, 58, 35, 0) 100%)
+
+    @media (max-width: 1024px)
+        background: linear-gradient(
+        to right,
+        rgba(67, 58, 35, 0.25) 100%,
+        rgba(67, 58, 35, 0.25) 85%,
+        rgba(67, 58, 35, 0) 100%)
 
     h1
-        font-size: 3em
-        margin-bottom: 1rem
+        margin-bottom: 0.3rem
+        font-size: 2em
+        font-weight: 500
+        color: #433A23
+
+    p
+        font-size: 1.4rem
+        font-weight: 500
+        color: #ffffff
 
     span
-        font-size: 1.2rem
-
-
+        color: #FBEC94

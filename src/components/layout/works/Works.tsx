@@ -7,9 +7,11 @@ import styles from "./worlks.module.sass"
 export default function Works() {
     return (
         <div className={styles.WrapperWorks}>
-            <h1>Bem me Quer</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.ex iusto et ea</p>
-            <p>Maxime culpa in sint a labore nesciunt incidunt inventore. Commodi voluptate quia nihil repellendus,vero dolore porro inventore!</p>
+            <h1>Serviços Disponiveis</h1>
+                <p>
+                    Na Bem me quer você encontra: cabeleireira, manicure, pedicure, unhas de fibra, banho de gel e
+                    alongamento de cílios – tudo em um só espaço <span>feito para realçar sua beleza.</span>
+                </p>
             <div className={styles.ContainerWorks}>
                 {Array.from({ length: 3 }).map((_, index) => (
                     <Card key={index} className={styles.ContainerAvantar}>

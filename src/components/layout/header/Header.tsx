@@ -2,14 +2,13 @@ import styles from "./header.module.sass"
 
 export default function Header() {
     return (
-        <nav className={styles.WrapperHeader}>
-            <img src="logoBem1.jpg" alt="LogoBemMeQuer" className={styles.styleLogo}/>
+        <header className={styles.WrapperHeader}>
+            <img className={styles.styleLogo} src="header/logoBemMeQuer.png" alt="LogoBemMeQuer"/>
             <div className={styles.WrapperLink}>
-                <a href="">About</a>
-                <a href="">About</a>
-                <a href="">About</a>
-                <a href="">About</a>
+                <a href="">Sobre Nôs</a>
+                <a href="">Serviços</a>
+                <a href="">Contato</a>
             </div>
-        </nav>
+        </header>
     )
 }
