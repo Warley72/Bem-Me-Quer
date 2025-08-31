@@ -1,4 +1,4 @@
-import Projects from "../Projects/Projects"
+import Projects from "../projects/Projects"
 import styles from "./about.module.sass"
 
 export default function About() {

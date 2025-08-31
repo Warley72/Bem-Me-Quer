@@ -1,31 +1,15 @@
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { AiOutlineWhatsApp } from "react-icons/ai";
-
+import { ProjectCarousel } from "../servicingCarousel/ProjectCarousel"
+import { works } from "@/mocks/works/works"
 import styles from "./worlks.module.sass"
 
 export default function Works() {
     return (
         <div className={styles.WrapperWorks}>
-            <h1>Serviços Disponiveis</h1>
-                <p>
-                    Na Bem me quer você encontra: cabeleireira, manicure, pedicure, unhas de fibra, banho de gel e
-                    alongamento de cílios – tudo em um só espaço <span>feito para realçar sua beleza.</span>
-                </p>
+            <h1>{works.title}</h1>
+            <p>{works.text}</p>
+            <span>{works.highlight}</span>
             <div className={styles.ContainerWorks}>
-                {Array.from({ length: 3 }).map((_, index) => (
-                    <Card key={index} className={styles.ContainerAvantar}>
-                        <img src="image2.jpg" alt="" />
-                        <h1>Limpeza de pele</h1>
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora illum quisquam, omnis iure odio soluta
-                        </span>
-                        <Button className={styles.StyleButton}>
-                            Agenda aqui
-                            <AiOutlineWhatsApp />
-                        </Button>
-                    </Card>
-                ))}
+                <ProjectCarousel />
             </div>
         </div>
     )
