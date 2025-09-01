@@ -1,10 +1,57 @@
-.wrapperServicing
-    max-width: 350px
+.ServicingCarousel
+    max-width: 64rem
     width: 100%
-    max-height: 460px
+
+.CarouselItemStyle
+    flex-basis: 100%
+
+    @media (min-width: 768px)
+        flex-basis: 50%
+
+    @media (min-width: 1024px)
+        flex-basis: 33.3%
+
+.Cardstyle
+    position: relative
+    height: 460px
+    border-radius: 0.75rem
+    overflow: hidden
+    border: none
+
+.backgroundStyle
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-size: cover
+    background-position: center
+
+.CardContentStyle
+    display: flex
+    align-items: center
+    flex-direction: column
+    gap: 2rem
+
+    z-index: 1
     height: 100%
+    padding: 1.5rem
+    color: #FFFFFF
 
-    background-color: #ffffff
 
-.styleTitle
-    color: #000000
+    .TitleStyle
+        text-align: center
+        font-size: 2.3rem
+        font-weight: 500
+        margin-bottom: 0.75rem
+        color: #FFFFFF
+
+    .UlStyle
+        margin-top: 0.25rem
+        font-size: 1.2rem
+        line-height: 1.625rem
+
+    .LiStyle
+        list-style-type: disc
+        list-style-position: inside
+

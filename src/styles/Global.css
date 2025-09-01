@@ -12,6 +12,10 @@ body {
     url(/background/Background.png);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     padding: 0;
     margin: 0;

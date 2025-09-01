@@ -8,9 +8,15 @@ export default function App() {
     return (
         <div>
             <Header />
-            <About />
-            <Works />
-            <GoogleMaps />
+            <section id="about">
+                <About />
+            </section>
+            <section id="works">
+                <Works />
+            </section>
+            <section id="localizaçao">
+                <GoogleMaps />
+            </section>
             <Footer />
         </div>
     )

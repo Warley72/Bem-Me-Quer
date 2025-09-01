@@ -5,9 +5,9 @@ export default function Header() {
         <header className={styles.WrapperHeader}>
             <img className={styles.styleLogo} src="header/logoBemMeQuer.png" alt="LogoBemMeQuer"/>
             <div className={styles.WrapperLink}>
-                <a href="">Sobre Nôs</a>
-                <a href="">Serviços</a>
-                <a href="">Contato</a>
+                <a className={styles.LinkStyle} href="#about">Sobre Nôs</a>
+                <a className={styles.LinkStyle} href="#works">Serviços</a>
+                <a className={styles.LinkStyle} href="#localizaçao">Localização</a>
             </div>
         </header>
     )

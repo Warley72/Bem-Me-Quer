@@ -5,10 +5,10 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel"
-
-
 
 import Autoplay from "embla-carousel-autoplay"
 
@@ -29,11 +29,11 @@ export default function Projects() {
     }, [api])
 
     return (
-        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]} className="bg-[#433A23] p-2 rounded-xl">
+        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]} className="bg-[#433A23] p-2 rounded-xl w-full max-w-[560px] max-h-[350px] mx-auto">
             <CarouselContent>
                 {Array.from({ length: 1 }).map((_, index) => (
                     <CarouselItem key={index}>
-                        <Card className="h-75 w-120">
+                        <Card className="h-64 sm:h-72 md:h-80 w-full">
                             <CardContent className="flex items-center justify-center h-full">
                                 <span className="text-4xl font-semibold">{index + 1}</span>
                             </CardContent>
@@ -41,6 +41,8 @@ export default function Projects() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
+            <CarouselPrevious className="top-1/2 -left-1 -translate-y-1/2" />
+            <CarouselNext className="top-1/2 -right-1 -translate-y-1/2" />
         </Carousel>
     )
 }

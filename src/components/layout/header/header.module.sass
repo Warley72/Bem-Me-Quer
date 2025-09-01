@@ -17,14 +17,21 @@
     background-repeat: repeat-x
     background-size: auto
 
-    a
+    @media (max-width: 1024px)
+        gap: 1rem
+
+    .LinkStyle
         margin-top: 2rem
         font-size: 1.7rem
         font-weight: 600
         color: #B2B2B2
+        transition: color 0.3s ease
         @media (max-width: 1024px)
-            margin-top: 0
             font-size: 1.2rem
+
+        &:hover
+            color: #fff
+            border-bottom: 5px solid #FBE58A
 
 .styleLogo
     width: 15rem
@@ -35,4 +42,3 @@
         width: 12rem
         height: 11rem
         margin-top: 2rem
-
