@@ -28,30 +28,51 @@
     background-position: center
 
 .CardContentStyle
-    display: flex
-    align-items: center
-    flex-direction: column
-    gap: 2rem
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  gap: 2rem
 
-    z-index: 1
-    height: 100%
+  z-index: 1
+  height: 100%
+  padding: 1.5rem
+  color: #fff
+
+.TitleStyle
+  text-align: center
+  font-size: 2.5rem
+  font-weight: 500
+  margin: 0
+
+.UlStyle
+  margin: 0
+  padding-left: 1.25rem
+  list-style: disc outside
+  font-size: 1.2rem
+  line-height: 1.625rem
+  display: grid
+  gap: .4rem
+
+
+.stylesButton
+    background: linear-gradient(90deg, #FBEC94 0%, #C7B54E 100%)
+    border: none
     padding: 1.5rem
-    color: #FFFFFF
+    border-radius: 5px
+    color: #433A23
+    font-weight: 600
+    font-size: 1.2rem
+    text-transform: uppercase
+    cursor: pointer
+    transition: transform 0.2s ease, opacity 0.2s ease
 
+    &:hover
+        transform: scale(1.05)
+        opacity: 0.9
+    &:active
+        transform: scale(0.98)
 
-    .TitleStyle
-        text-align: center
-        font-size: 2.3rem
-        font-weight: 500
-        margin-bottom: 0.75rem
-        color: #FFFFFF
-
-    .UlStyle
-        margin-top: 0.25rem
-        font-size: 1.2rem
-        line-height: 1.625rem
-
-    .LiStyle
-        list-style-type: disc
-        list-style-position: inside
-
+.TextWrapper
+  display: flex
+  flex-direction: column
+  gap: 1rem

@@ -1,12 +1,9 @@
 import * as React from "react"
-import { Card, CardContent } from "@/components/ui/card"
-
+import { projectsImages } from "@/mocks/projects/projects"
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel"
 
@@ -29,20 +26,20 @@ export default function Projects() {
     }, [api])
 
     return (
-        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 3000 })]} className="bg-[#433A23] p-2 rounded-xl w-full max-w-[560px] max-h-[350px] mx-auto">
+        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 2500 })]} opts={{ loop: true }}
+            className="bg-[#433A23] p-2 rounded-xl w-full max-w-[580px] max-h-[315px]">
             <CarouselContent>
-                {Array.from({ length: 1 }).map((_, index) => (
-                    <CarouselItem key={index}>
-                        <Card className="h-64 sm:h-72 md:h-80 w-full">
-                            <CardContent className="flex items-center justify-center h-full">
-                                <span className="text-4xl font-semibold">{index + 1}</span>
-                            </CardContent>
-                        </Card>
+                {projectsImages.map((images) => (
+                    <CarouselItem key={images.id}>
+                        <div className="w-full h-[300px] flex items-center justify-center">
+                            <img
+                                src={images.image}
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+                        </div>
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="top-1/2 -left-1 -translate-y-1/2" />
-            <CarouselNext className="top-1/2 -right-1 -translate-y-1/2" />
         </Carousel>
     )
 }
