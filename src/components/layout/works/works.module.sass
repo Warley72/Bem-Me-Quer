@@ -4,19 +4,24 @@
     justify-content: center
     flex-direction: column
 
-    margin-bottom: 1rem
+    padding: 2rem
     background-image: url(/works/fundoservices.png)
 
     .TitleStyle
-        margin: 6rem 0 0.5rem 0
+        margin-top: 6rem
         color: #FBEC94
         text-align: center
         font-size: 2.5rem
+
+        @media (max-width: 1024px)
+            margin-top: 2rem
 
     .TextStyle
         max-width: 800px
         width: 100%
         color: #ffffff
+        margin-top: 0.5rem
+        text-align: center
         font-size: 1.5rem
         font-weight: 500
 
@@ -26,12 +31,12 @@
         color: #ffffff
         font-size: 1.5rem
         font-weight: 500
+        margin-bottom: 0.5rem
 
 .ContainerWorks
     display: flex
+    align-items: center
     justify-content: center
-    flex-wrap: wrap
-    gap: 1rem
 
-    padding: 1rem
     margin-top: 1rem
+    width: 100%

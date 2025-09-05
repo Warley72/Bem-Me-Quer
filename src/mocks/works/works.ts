@@ -19,16 +19,16 @@ export const works: WorksProps = {
             image: "/works/cíliospng.png",
         },
         {
+            id: 4,
+            title: "Cabelos com brilho",
+            text: "Escova e finalizações Coloração e mechas Tratamentos capilares Hidratação e brilho",
+            image: "/works/Cabeleireira.png",
+        },
+        {
             id: 3,
             title: "Manicures e Pedicure",
             text: "Manicure completa Pedicure bem cuidada Unhas de fibra com durabilidade Banho de gel para mais brilho e resistência",
             image: "/works/ManicuresPedicure.png",
-        },
-        {
-            id: 4,
-            title: "Cabelos com brilhos",
-            text: "Escova e finalizações Coloração e mechas Tratamentos capilares Hidratação e brilho",
-            image: "/works/Cabeleireira.png",
         },
     ],
 };
