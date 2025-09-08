@@ -12,17 +12,17 @@ import styles from "./projects.module.sass"
 
 export default function Projects() {
     const [api, setApi] = React.useState<CarouselApi>()
-    const [, setCurrent] = React.useState(0)
-    const [, setCount] = React.useState(0)
+    const [current, setCurrent] = React.useState(0)
+    const [count, setCount] = React.useState(0)
 
     React.useEffect(() => {
-        if (!api) {
-            return
-        }
+        if (!api) return
+
         setCount(api.scrollSnapList().length)
-        setCurrent(api.selectedScrollSnap() + 1)
+        setCurrent(api.selectedScrollSnap())
+
         api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1)
+            setCurrent(api.selectedScrollSnap())
         })
     }, [api])
 
@@ -44,15 +44,19 @@ export default function Projects() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
+            <div className={styles.DotButton}>
+                {Array.from({ length: count }).map((_, i) => (
+                    <img
+                        key={i}
+                        className={styles.styleiamge}
+                        src={
+                            i === current
+                                ? "./about/florhover.png"
+                                : "./about/flor.png"
+                        }
+                    />
+                ))}
+            </div>
         </Carousel>
     )
 }
-
-/*
-    <div className={styles.DotButton}>
-        <img className={styles.styleiamge} src="./about/flor.png" alt="" />
-        <img className={styles.styleiamge} src="./about/flor.png" alt="" />
-        <img className={styles.styleiamge} src="./about/flor.png" alt="" />
-        <img className={styles.styleiamge} src="./about/flor.png" alt="" />
-    </div>
-*/

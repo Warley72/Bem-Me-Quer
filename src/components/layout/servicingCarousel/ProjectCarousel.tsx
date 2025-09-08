@@ -24,8 +24,8 @@ export function ProjectCarousel() {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious />
             <CarouselNext />
+            <CarouselPrevious />
         </Carousel>
     )
 }
