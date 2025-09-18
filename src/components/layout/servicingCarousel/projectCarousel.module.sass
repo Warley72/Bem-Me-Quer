@@ -1,3 +1,9 @@
+.CarouselWrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+
 .ServicingCarousel
     max-width: 64rem
     width: 100%
@@ -21,7 +27,7 @@
 
 .ServiceCard
     display: flex
-    justify-content: space-between
+    justify-content: space-evenly
     flex-direction: column
 
     max-width: 350px
@@ -66,3 +72,10 @@
         opacity: 0.9
     &:active
         transform: scale(0.98)
+
+.ButtonWrapper
+    position: absolute
+    bottom: -1.6rem
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 20

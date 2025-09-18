@@ -1,4 +1,4 @@
-import type { projectsProps } from "@/interface/projects";
+import type { projectsProps } from "@/interfaces/projects";
 
 export const projectsImages: projectsProps[] = [
     {

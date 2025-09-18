@@ -13,7 +13,7 @@ const containerStyle = {
     borderRadius: "12px",
 }
 
-const destination = { lat: -15.6142, lng: -47.6503 } // Rodoviária de Planaltina-DF
+const destination = { lat: -15.6142, lng: -47.6503 }
 
 export default function GoogleMaps() {
     const [directions, setDirections] = useState<google.maps.DirectionsResult>()
@@ -46,14 +46,7 @@ export default function GoogleMaps() {
     return (
         <div className={styles.WrapperGoogleMaps}>
             <h1 className={styles.TitleStyle}>Localização</h1>
-            <div className={styles.cardGoogleMaps}>
-
-            </div>
-        </div>
-    )
-}
-
-/*
+            <div >
                 <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_KEY}>
                     <GoogleMap
                         mapContainerStyle={containerStyle}
@@ -63,4 +56,11 @@ export default function GoogleMaps() {
                         {directions && <DirectionsRenderer directions={directions} />}
                     </GoogleMap>
                 </LoadScript>
-                */
+            </div>
+        </div>
+    )
+}
+
+
+//className={styles.cardGoogleMaps}
+
