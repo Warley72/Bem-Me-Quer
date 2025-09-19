@@ -1,8 +1,8 @@
-import Header from "./components/layout/header/header"
-import Works from "./components/layout/works/works"
-import Footer from "./components/layout/footer/footer"
-import About from "./components/layout/about/about"
-import GoogleMaps from "./components/layout/googleMaps/googleMaps"
+import Header from "@/components/layout/header/Header"
+import Works from "@/components/layout/works/Works"
+import Footer from "@/components/layout/footer/Footer"
+import About from "@/components/layout/about/About"
+import GoogleMaps from "@/components/layout/googleMaps/GoogleMaps"
 
 import { motion, AnimatePresence } from "framer-motion";
 
