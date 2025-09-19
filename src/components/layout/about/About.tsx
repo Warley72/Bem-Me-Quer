@@ -1,4 +1,5 @@
-import Projects from '../projects/Projects'
+import Projects from '../../layout/projects/projects'
+
 import styles from "./about.module.sass"
 
 export default function About() {

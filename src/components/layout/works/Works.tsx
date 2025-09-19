@@ -1,4 +1,4 @@
-import { ProjectCarousel } from "../servicingCarousel/ProjectCarousel"
+import { ProjectCarousel } from "../../layout/servicingCarousel/projectCarousel"
 
 import styles from "./works.module.sass"
 
