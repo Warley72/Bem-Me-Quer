@@ -1,4 +1,4 @@
-import Projects from '../projects/Projects'
+
 
 import styles from "./about.module.sass"
 
@@ -14,7 +14,7 @@ export default function About() {
                     única, onde cada detalhe é feito para que você se sinta ainda mais confiante, elegante e especial.
                 </p>
             </div>
-            <Projects />
+
         </div>
     )
 }
