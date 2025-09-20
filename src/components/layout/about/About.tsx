@@ -1,4 +1,4 @@
-import Projects from '@/components/layout/projects/Projects'
+import Projects from '../projects/Projects'
 
 import styles from "./about.module.sass"
 
