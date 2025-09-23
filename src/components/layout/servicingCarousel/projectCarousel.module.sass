@@ -75,3 +75,22 @@
     &:active
         transform: scale(0.98)
 
+.ServicingCarousel
+    position: relative
+
+.CarouselArrowPrev, .CarouselArrowNext
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.CarouselArrowPrev
+    left: -3rem
+
+    @media (max-width: 1024px)
+        left: -2.1rem
+
+.CarouselArrowNext
+    right: -3rem
+
+    @media (max-width: 1024px)
+        right: -2.1rem
