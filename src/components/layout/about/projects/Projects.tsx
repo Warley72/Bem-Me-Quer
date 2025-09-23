@@ -4,6 +4,8 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel"
 
@@ -31,32 +33,33 @@ export default function Projects() {
             setApi={setApi}
             plugins={[Autoplay({ delay: 2500 })]}
             opts={{ loop: true }}
-            className={styles.WrapperCarousel}>
-            <CarouselContent>
-                {projectsImages.map((images) => (
-                    <CarouselItem key={images.id}>
-                        <div className={styles.WrapperCarouselItem}>
-                            <img
-                                src={images.image}
-                                className={styles.StyleImage}
-                            />
-                        </div>
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-            <div className={styles.DotButton}>
-                {Array.from({ length: count }).map((_, i) => (
-                    <img
-                        key={i}
-                        className={styles.styleiamge}
-                        src={
-                            i === current
-                                ? "./about/florhover.png"
-                                : "./about/flor.png"
-                        }
-                    />
-                ))}
+            className={styles.WrapperCarousel}
+        >
+            <div className="relative">
+                <CarouselContent>
+                    {projectsImages.map((images) => (
+                        <CarouselItem key={images.id}>
+                            <div className={styles.WrapperCarouselItem}>
+                                <img src={images.image} className={styles.StyleImage} />
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                
+                <div className={styles.DotButton}>
+                    {Array.from({ length: count }).map((_, i) => (
+                        <img
+                            key={i}
+                            className={styles.styleiamge}
+                            src={i === current ? "./about/florhover.png" : "./about/flor.png"}
+                            onClick={() => api?.scrollTo(i)}
+                        />
+                    ))}
+                </div>
+                <CarouselPrevious className="absolute top-1/2 left-2 -translate-y-1/2" />
+                <CarouselNext className="absolute top-1/2 right-2 -translate-y-1/2" />
             </div>
         </Carousel>
+
     )
 }
